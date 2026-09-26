@@ -1,4 +1,7 @@
 const cheerBtn = document.querySelector(".cheer");
+const cheerDialog = document.querySelector(".cheer-dialog");
+const closeBtn = document.querySelector(".close-btn");
+const dialogText = document.querySelector(".cheer-dialog p");
 
 const cheerMessages = [
   "오늘 하루도 힘내~~~ 💪",
@@ -10,5 +13,11 @@ const cheerMessages = [
 cheerBtn.addEventListener("click", () => {
   const randomIndex = Math.floor(Math.random() * cheerMessages.length);
 
-  alert(cheerMessages[randomIndex]);
+  dialogText.textContent = cheerMessages[randomIndex];
+
+  cheerDialog.showModal();
+});
+
+closeBtn.addEventListener("click", () => {
+  cheerDialog.close();
 });

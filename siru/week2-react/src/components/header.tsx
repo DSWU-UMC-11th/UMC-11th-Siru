@@ -4,7 +4,7 @@ export default function Header() {
       <nav className="navi">
         <div className="logo-grid">
           <img className="logo-img" src="../../public/icons/movie.svg" />
-          <p className="logo-text">UMCine</p>
+          <h4 className="logo-text">UMCine</h4>
         </div>
         <div className="category">
           <p>영화</p>
